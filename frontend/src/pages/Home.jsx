@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import Grainient from '../components/Grainient';
 import ShinyText from '../components/ShinyText';
 import SpotlightCard from '../components/SpotlightCard';
+import './Home.css';
 
 function Home() {
   const navigate = useNavigate();
@@ -12,28 +13,13 @@ function Home() {
 
   const handleViewGithub = () => {
     // Update this URL with your GitHub repository
-    window.open('https://github.com', '_blank');
+    window.open('https://github.com/harshitxix/HRMS', '_blank');
   };
 
   return (
-    <div style={{
-      minHeight: '100vh',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      justifyContent: 'center',
-      position: 'relative',
-      padding: '20px'
-    }}>
+    <div className="home-container">
       {/* Grainient Background */}
-      <div style={{
-        position: 'absolute',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 0
-      }}>
+      <div className="home-background">
         <Grainient
           color1="#FFFFFF"
           color2="#8080FF"
@@ -44,17 +30,8 @@ function Home() {
       </div>
 
       {/* HRMS Lite Branding - Top Left */}
-      <div style={{
-        position: 'absolute',
-        top: '30px',
-        left: '30px',
-        zIndex: 10
-      }}>
-        <h2 style={{
-          fontSize: '1.8rem',
-          fontWeight: '700',
-          margin: 0
-        }}>
+      <div className="home-branding">
+        <h2 className="home-branding-title">
           <ShinyText 
             text="HRMS Lite" 
             color="#5050CC"
@@ -66,23 +43,10 @@ function Home() {
       </div>
 
       {/* Main Content */}
-      <div style={{
-        textAlign: 'center',
-        position: 'relative',
-        zIndex: 1,
-        maxWidth: '900px',
-        width: '100%'
-      }}>
+      <div className="home-content">
         {/* Hero Section */}
-        <div style={{
-          marginBottom: '50px'
-        }}>
-          <h1 style={{
-            fontSize: '4rem',
-            marginBottom: '30px',
-            fontWeight: '700',
-            lineHeight: '1.2'
-          }}>
+        <div className="home-hero">
+          <h1 className="home-title">
             <ShinyText 
               text="Modern HR Management System" 
               color="#5050CC"
@@ -92,77 +56,30 @@ function Home() {
             />
           </h1>
           
-          <p style={{
-            fontSize: '1.5rem',
-            color: '#555',
-            fontWeight: '500',
-            lineHeight: '1.6',
-            marginTop: '20px'
-          }}>
+          <p className="home-subtitle">
             All-in-one employee management and attendance tracking made simple.
           </p>
         </div>
 
         {/* Action Buttons */}
-        <div style={{
-          display: 'flex',
-          gap: '24px',
-          justifyContent: 'center',
-          flexWrap: 'wrap',
-          marginBottom: '60px'
-        }}>
+        <div className="home-buttons">
           <button
             onClick={handleLetsGo}
-            style={{
-              padding: '18px 48px',
-              background: 'linear-gradient(135deg, #8080FF 0%, #6060DD 100%)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '16px',
-              fontSize: '18px',
-              fontWeight: '700',
-              cursor: 'pointer',
-              boxShadow: '0 8px 24px rgba(128, 128, 255, 0.4)',
-              transition: 'all 0.3s',
-              minWidth: '220px'
-            }}
-            onMouseOver={(e) => (e.target.style.transform = 'translateY(-3px)', e.target.style.boxShadow = '0 12px 32px rgba(128, 128, 255, 0.5)')}
-            onMouseOut={(e) => (e.target.style.transform = 'translateY(0)', e.target.style.boxShadow = '0 8px 24px rgba(128, 128, 255, 0.4)')}
+            className="home-button home-button-primary"
           >
             Let's Go →
           </button>
 
           <button
             onClick={handleViewGithub}
-            style={{
-              padding: '18px 48px',
-              background: 'rgba(255, 255, 255, 0.9)',
-              backdropFilter: 'blur(10px)',
-              color: '#8080FF',
-              border: '2px solid #8080FF',
-              borderRadius: '16px',
-              fontSize: '18px',
-              fontWeight: '700',
-              cursor: 'pointer',
-              boxShadow: '0 8px 24px rgba(128, 128, 255, 0.2)',
-              transition: 'all 0.3s',
-              minWidth: '220px'
-            }}
-            onMouseOver={(e) => (e.target.style.transform = 'translateY(-3px)', e.target.style.boxShadow = '0 12px 32px rgba(128, 128, 255, 0.3)', e.target.style.background = '#8080FF', e.target.style.color = 'white')}
-            onMouseOut={(e) => (e.target.style.transform = 'translateY(0)', e.target.style.boxShadow = '0 8px 24px rgba(128, 128, 255, 0.2)', e.target.style.background = 'rgba(255, 255, 255, 0.9)', e.target.style.color = '#8080FF')}
+            className="home-button home-button-secondary"
           >
             View on GitHub ★
           </button>
         </div>
 
         {/* Feature Cards */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-          gap: '24px',
-          maxWidth: '800px',
-          margin: '0 auto'
-        }}>
+        <div className="home-features">
           <SpotlightCard spotlightColor="rgba(128, 128, 255, 0.3)">
             <div style={{ textAlign: 'center' }}>
               <div style={{ marginBottom: '16px' }}>
