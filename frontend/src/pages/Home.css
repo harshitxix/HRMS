@@ -114,15 +114,21 @@
 @media (max-width: 768px) {
   .home-container {
     padding: 15px;
+    padding-top: 80px; /* Add space for branding */
   }
 
   .home-branding {
-    top: 15px;
-    left: 15px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the branding */
   }
 
   .home-branding-title {
     font-size: 1.2rem;
+  }
+
+  .home-content {
+    margin-top: 20px;
   }
 
   .home-hero {
@@ -159,12 +165,20 @@
 }
 
 @media (max-width: 480px) {
+  .home-container {
+    padding-top: 70px;
+  }
+
+  .home-branding-title {
+    font-size: 1rem;
+  }
+
   .home-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .home-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   .home-button {
