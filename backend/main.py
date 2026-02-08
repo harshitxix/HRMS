@@ -36,11 +36,24 @@ async def startup_event():
 origins = [
     "http://localhost:3001",
     "http://localhost:5173",
-    os.getenv("FRONTEND_URL", "http://localhost:3001"),
 ]
 
-# Add wildcard only for development
-if os.getenv("ENVIRONMENT", "development") == "development":
+# Add production frontend URLs
+frontend_url = os.getenv("FRONTEND_URL", "")
+if frontend_url:
+    origins.append(frontend_url)
+    # Also add the domain without trailing slash if it has one
+    if frontend_url.endswith("/"):
+        origins.append(frontend_url.rstrip("/"))
+
+# For production, also allow all Vercel preview deployments
+if os.getenv("ENVIRONMENT", "development") != "development":
+    origins.extend([
+        "https://hrms-roan-three.vercel.app",
+        "https://hrms-git-main-harshit-chauhans-projects-971bc5e9.vercel.app"
+    ])
+else:
+    # Add wildcard only for development
     origins.append("*")
 
 app.add_middleware(
