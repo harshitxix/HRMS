@@ -1,0 +1,47 @@
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Navbar mobile styles */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+
+  .app-navbar {
+    padding: 15px 20px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .navbar-title {
+    font-size: 1.1rem !important;
+  }
+
+  .navbar-actions {
+    width: 100%;
+    flex-direction: column !important;
+    gap: 15px !important;
+    align-items: stretch !important;
+  }
+
+  .navbar-actions > * {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 0.75rem;
+  }
+
+  .app-navbar {
+    padding: 12px 15px !important;
+  }
+
+  .navbar-title {
+    font-size: 1rem !important;
+  }
+}
