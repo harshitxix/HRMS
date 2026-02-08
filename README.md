@@ -4,6 +4,19 @@ A lightweight, full-stack HRMS application for managing employees and tracking d
 
 ## 🚀 Live Demo
 
+**🌐 Live Application:** https://hrms-roan-three.vercel.app/
+
+### Deployment Status
+- **Frontend**: https://hrms-roan-three.vercel.app/ ✅
+- **Backend API**: https://clever-laughter-production-8a53.up.railway.app/ ✅
+- **API Documentation**: https://clever-laughter-production-8a53.up.railway.app/docs ✅
+- **GitHub Repository**: https://github.com/harshitxix/HRMS
+
+### Deployment Platforms
+- **Frontend**: Vercel
+- **Backend**: Railway
+- **Database**: Supabase
+
 ### Quick Deploy (15 minutes)
 Follow our comprehensive guides:
 - **[📚 DEPLOYMENT.md](./DEPLOYMENT.md)** - Complete deployment guide
@@ -13,11 +26,6 @@ Follow our comprehensive guides:
 - **Frontend**: Vercel or Netlify (Free tier available)
 - **Backend**: Railway or Render (Free tier available)
 - **Database**: Supabase (Free tier available)
-
-### Deployment Status
-- **Frontend**: [To be deployed]
-- **Backend API**: [To be deployed]
-- **API Documentation**: [To be deployed]/docs
 
 ---
 
